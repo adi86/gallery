@@ -1,0 +1,6 @@
+<div id="photos" infinite-scroll [infiniteScrollDistance]="1"
+     [infiniteScrollThrottle]="50" (scrolled)="onScrolled()" [infiniteScrollDisabled]="disabled">
+  <div class="photo" *ngFor="let image of images">
+    <img src="https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}.jpg" title="{{image.ownername}}">
+  </div>
+</div>
